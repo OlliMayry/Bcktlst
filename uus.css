@@ -1,0 +1,116 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: verdana;
+    text-transform: capitalize;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, rgb(0, 132, 255) 33.33%, rgb(2, 5, 7) 33.33%, rgb(63, 0, 122) 66.66%, rgb(255, 0, 255) 66.66%);
+    position: relative;
+    
+}
+#pallo{
+    margin-top: 10px;
+    left:auto;
+    color:#073479;
+    position: relative;
+    -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+    
+#pallo2{  
+    margin-top: 10px;
+    right:auto;
+    color:#073479;
+    position: relative;
+    -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+@keyframes rotation {
+    from {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+
+.container{
+    height: 450px;
+    width: 330px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+    padding: 10px;
+    overflow-y:auto;
+}
+h1{
+    text-align: center;
+    justify-content: center;
+}
+#input{
+    height:50px;
+    width: 100%;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    background: #666;
+    color:#fff;
+    padding:0 10px;
+    margin:15px 0;
+}
+#input::placeholder{
+    color: #bbb;
+}
+ul li{
+    background: #eee;
+    color:#333;
+    height: 40px;
+    border-radius: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    position:relative;
+    transition: 0.5s;
+}
+ul .fa-check, .fa-trash{
+    position: absolute;
+    cursor: pointer;
+}
+ul .fa-check{
+    right:40px;
+    color:green;
+}
+ul .fa-trash{
+    right:15px;
+    color:#505050;
+}
+ul .checked{
+    background: lightgreen;
+    text-decoration: line-trough;
+    transition: .2s;
+}
+ul:hover li{
+    color: purple;
+}
